@@ -68,7 +68,18 @@ Create the following routes as efficiently as possible, using validation where a
 
 ![img_3.png](img_3.png)
 
+Pruebo a pasarle un id que no existe
+
+![img_6.png](img_6.png)
+
 4. **Update doctor's department**: Create a route to update a doctor's department.
+
+![img_4.png](img_4.png)
+
+Pruebo a pasarle un id que no existe
+
+![img_5.png](img_5.png)
+
 5. **Update patient information**: Create a route to update patient information (the user should be able to update any patient information through this route).
 6. **Write a short answer in README.md**. In your `README.md`, write a short answer to the following questions:
 

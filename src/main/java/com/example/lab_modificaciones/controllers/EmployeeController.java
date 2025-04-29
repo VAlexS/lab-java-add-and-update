@@ -1,5 +1,6 @@
 package com.example.lab_modificaciones.controllers;
 
+import com.example.lab_modificaciones.dtos.UpdateDepartmentDTO;
 import com.example.lab_modificaciones.dtos.UpdateStatusDTO;
 import com.example.lab_modificaciones.models.Employee;
 import com.example.lab_modificaciones.models.Status;
@@ -35,6 +36,13 @@ public class EmployeeController {
         }
 
         return employeeService.changeStatusEmployee(id, dto.getStatus());
+    }
+
+
+    @PatchMapping("/{id}/department")
+    @ResponseStatus(HttpStatus.OK)
+    public Employee updateDoctorDepartment(@PathVariable int id, @Valid @RequestBody UpdateDepartmentDTO dto) {
+        return employeeService.changeDepartmentEmployee(id, dto.getDepartment());
     }
 
 }

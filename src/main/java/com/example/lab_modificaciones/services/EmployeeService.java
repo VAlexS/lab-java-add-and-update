@@ -33,4 +33,18 @@ public class EmployeeService {
         return employeeRepository.save(employeeToChange);
 
     }
+
+    public Employee changeDepartmentEmployee(int id, String department) {
+        Employee employeeToChange = employeeRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Employee not found"));
+
+        if (department == null || department.isBlank()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "El departamento no puede estar vacío");
+        }
+
+        employeeToChange.setDepartment(department);
+        return employeeRepository.save(employeeToChange);
+    }
+
+
 }

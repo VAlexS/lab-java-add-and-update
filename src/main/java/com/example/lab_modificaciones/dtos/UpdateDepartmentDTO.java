@@ -4,14 +4,14 @@ import jakarta.validation.constraints.NotBlank;
 
 public class UpdateDepartmentDTO {
 
-    @NotBlank(message = "El depa")
-    private String status;
+    @NotBlank(message = "El departamento no puede estar vacio")
+    private String department;
 
-    public String getStatus() {
-        return status;
+    public String getDepartment() {
+        return department;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setDepartment(String department) {
+        this.department = department;
     }
 }
