@@ -91,9 +91,27 @@ Le paso un ID que no existe
 6. **Write a short answer in README.md**. In your `README.md`, write a short answer to the following questions:
 
    - Did you use the same type of route to update patient information as to update an employee's department?
-   - Why did you choose the selected strategy?
-   - What are the advantages and disadvantages of the strategies you chose for creating these routes?
-   - What is the cost-benefit between using `PUT` and `PATCH`?
+      
+     No, para actualizar la información del paciente he utilizado `PUT`.Sin embargo, para modificar el departamento de un empleado.
+     He utilizado `PATCH` para gestionar esa modificación. 
+   
+  - Why did you choose the selected strategy?
+    
+  La razón por la que he utilizado `PUT` para la actualización del paciente es porque no se sabe de antemano que columnas se va a actualizar,
+  por lo tanto, hay que especificar todos los campos. Por otro lado, la razón por la que he utilizado `PATCH` para modificar el departamento
+  de un empleado es debido a que hay que modificar un campo en concreto.
+
+  - What are the advantages and disadvantages of the strategies you chose for creating these routes?
+
+    Con respecto a `PATCH`, la ventaja que tiene es que garantiza que se permita modificar ciertos campos en concretos. Por otro lado,
+    tiene como desventaja que por detras hay que añadirle más lógica.
+
+    Con respecto a `PUT`, tiene como ventaja que no hay que añadir lógica adicional en el código, más allá de la llamada
+    al método correspondiente. Por otro lado, tiene como desventaja que hay que especificar todos los campos, aunque algunos se vayan a
+    mantener.
+
+  
+  - What is the cost-benefit between using `PUT` and `PATCH`?
 
 <br>  
 
