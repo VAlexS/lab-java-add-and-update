@@ -20,4 +20,11 @@ public class PatientController {
         return patientService.createPatient(patient);
     }
 
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Patient updatePatient(@PathVariable int id, @RequestBody @Valid Patient patient){
+        return patientService.updatePatient(id, patient);
+
+    }
+
 }

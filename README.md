@@ -81,6 +81,13 @@ Pruebo a pasarle un id que no existe
 ![img_5.png](img_5.png)
 
 5. **Update patient information**: Create a route to update patient information (the user should be able to update any patient information through this route).
+
+![img_7.png](img_7.png)
+
+Le paso un ID que no existe
+
+![img_8.png](img_8.png)
+
 6. **Write a short answer in README.md**. In your `README.md`, write a short answer to the following questions:
 
    - Did you use the same type of route to update patient information as to update an employee's department?
