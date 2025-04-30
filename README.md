@@ -112,6 +112,13 @@ Le paso un ID que no existe
 
   
   - What is the cost-benefit between using `PUT` and `PATCH`?
+    
+     En cuanto a costos, a nivel de rendimiento y consumo de recursos. 
+      * Con `PUT`, en caso de que se deba enviar el objeto completo, este método puede ser más pesado y consumir más ancho de banda, 
+        sobre todo si trabajas con objetos grandes o estructuras de datos complejas.
+      * Con `PATCH` no consume tantos recursos porque solo envías los datos que realmente quieres actualizar. 
+        Así se reduce significativamente la carga en el servidor y el ancho de banda, haciéndolo más rápido y ligero cuando no hay 
+        muchas modificaciones por hacer.
 
 <br>  
 
